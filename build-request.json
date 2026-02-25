@@ -1,0 +1,118 @@
+{
+  "kind": "build_request",
+  "title": "Magic Hair Salon Website",
+  "projectName": "Magic Hair Salon",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a visually striking hero section at the top of the homepage displaying the salon name 'Magic Hair Salon', the open/closed status badge (currently Open, closes at 9:00 PM), a 4.9/5 star rating with 265 reviews, and a prominent WhatsApp booking call-to-action button linking to wa.me/+918129529732.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "make a website and make website name as Magic Hair salon",
+          "Open",
+          "Closes at 9:00 PM",
+          "4.9 / 5",
+          "265 Reviews",
+          "081295 29732"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Salon name 'Magic Hair Salon' is prominently displayed as the page heading",
+        "Open status badge is visible with closing time '9:00 PM'",
+        "Star rating shows 4.9/5 with 265 reviews",
+        "WhatsApp booking button links to wa.me/+918129529732",
+        "Hero section is visually prominent and mobile-responsive"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a comprehensive Services section that organizes all offered services into clearly labeled category cards: Hair Services (Haircut, Hairstyling, Blow dry, Hair extensions, Balayage, Perms, Dreadlocks, Braids/Box braids, Shampoo & conditioning), Skin & Beauty (Facials, Skin care, Acne treatments, Make-up & bridal make-up, Microblading, Permanent makeup, Lash lift/Lash perms, Eyelash extensions, Eyebrow threading & shaping), Body Services (Waxing/Body waxing, Laser hair removal, Permanent hair removal, Pedicure, Manicure, Massage, Spa services, Tanning), Bridal & Event Services (Bridal services, Wedding & event preparation), and Other (Online booking, Mobile salon service, Shaving).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Services Offered",
+          "Hair Services",
+          "Skin & Beauty",
+          "Body Services",
+          "Bridal & Event Services",
+          "Other"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 5 service categories are displayed as distinct cards or sections",
+        "Every individual service listed in the request appears under its correct category",
+        "Layout is responsive and readable on both mobile and desktop",
+        "Category headings are visually distinct from service item lists"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a Location & Contact section displaying the full address (Nate Adattu Avenue, 1st Floor, Old Market Road, Junction, near Kurishupally, Pala, Kerala 686575), a clickable phone/WhatsApp link for 081295 29732 (formatted as +91 81295 29732), and a WhatsApp chat button. Include a 'Get Directions' link that opens Google Maps with the salon address pre-filled.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Nate Adattu Avenue, 1st Floor",
+          "Old Market Road, Junction, near Kurishupally",
+          "Pala, Kerala 686575",
+          "081295 29732"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Full address is displayed correctly",
+        "Phone number is a clickable tel: link",
+        "WhatsApp button opens wa.me/+918129529732",
+        "Get Directions link opens Google Maps with the salon address",
+        "Section is clearly laid out and mobile-friendly"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a luxurious, elegant visual theme across the entire website: use a warm champagne and deep charcoal color palette with gold accent tones, refined serif or elegant sans-serif typography, soft gradient backgrounds, and smooth card-based layouts. The design should feel premium and beauty-focused, consistent with a high-end unisex salon brand. Ensure full mobile responsiveness throughout all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Consistent warm champagne/gold/charcoal color palette applied site-wide",
+        "Typography is elegant and readable",
+        "All sections are mobile-responsive",
+        "Visual hierarchy clearly guides users from hero to services to contact",
+        "Overall design feels premium and beauty-industry appropriate"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use only static frontend — no backend logic needed for this informational website",
+    "WhatsApp contact number must be exactly +91 81295 29732 (081295 29732)",
+    "Do not invent pricing or booking system — only link to WhatsApp for bookings"
+  ],
+  "nonGoals": [
+    "Online appointment scheduling system with calendar/database",
+    "User authentication or login",
+    "Payment processing",
+    "Price list or menu pricing",
+    "Review submission system",
+    "Real-time open/closed status detection"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Elegant salon hero banner with warm golden bokeh lights, soft champagne background, and subtle hair styling silhouettes (salon-hero.dim_1440x600.png)",
+      "Decorative section divider with gold scissors and comb motif on transparent background (salon-divider.dim_1200x80.png)",
+      "Circular salon logo mark featuring stylized hair wave and star with gold tones on dark background (salon-logo.dim_256x256.png)"
+    ],
+    "edits": []
+  }
+}

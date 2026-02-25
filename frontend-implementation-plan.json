@@ -1,0 +1,98 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Magic Hair Salon Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a visually striking hero section with salon name, open/closed status, rating, and WhatsApp booking CTA",
+      "acceptanceCriteria": [
+        "Salon name 'Magic Hair Salon' is prominently displayed as the page heading",
+        "Open status badge is visible with closing time '9:00 PM'",
+        "Star rating shows 4.9/5 with 265 reviews",
+        "WhatsApp booking button links to wa.me/+918129529732",
+        "Hero section is visually prominent and mobile-responsive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero component displaying 'Magic Hair Salon' heading, Open status badge (closes at 9:00 PM), 4.9/5 star rating with 265 reviews, and WhatsApp booking button linking to wa.me/+918129529732. Use the generated hero banner image at frontend/public/assets/generated/salon-hero.dim_1440x600.png as the background. Apply luxurious styling with warm champagne/gold tones and ensure mobile responsiveness."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Hero component at the top of the main page layout, ensuring it appears as the first section users see when visiting the site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build comprehensive Services section organized into five category cards with all listed services",
+      "acceptanceCriteria": [
+        "All 5 service categories are displayed as distinct cards or sections",
+        "Every individual service listed in the request appears under its correct category",
+        "Layout is responsive and readable on both mobile and desktop",
+        "Category headings are visually distinct from service item lists"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "create",
+          "description": "Create Services component displaying five category cards: Hair Services (Haircut, Hairstyling, Blow dry, Hair extensions, Balayage, Perms, Dreadlocks, Braids/Box braids, Shampoo & conditioning), Skin & Beauty (Facials, Skin care, Acne treatments, Make-up & bridal make-up, Microblading, Permanent makeup, Lash lift/Lash perms, Eyelash extensions, Eyebrow threading & shaping), Body Services (Waxing/Body waxing, Laser hair removal, Permanent hair removal, Pedicure, Manicure, Massage, Spa services, Tanning), Bridal & Event Services (Bridal services, Wedding & event preparation), and Other (Online booking, Mobile salon service, Shaving). Use card-based layout with elegant typography and gold accents. Include the decorative section divider image frontend/public/assets/generated/salon-divider.dim_1200x80.png between categories or as a visual separator. Ensure mobile responsiveness."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Services component below the Hero section in the main page layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add Location & Contact section with full address, clickable phone/WhatsApp links, and Get Directions button",
+      "acceptanceCriteria": [
+        "Full address is displayed correctly",
+        "Phone number is a clickable tel: link",
+        "WhatsApp button opens wa.me/+918129529732",
+        "Get Directions link opens Google Maps with the salon address",
+        "Section is clearly laid out and mobile-friendly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact component displaying the full address (Nate Adattu Avenue, 1st Floor, Old Market Road, Junction, near Kurishupally, Pala, Kerala 686575), a clickable tel: link for +91 81295 29732, a WhatsApp chat button linking to wa.me/+918129529732, and a Get Directions link that opens Google Maps with the pre-filled salon address. Include the salon logo frontend/public/assets/generated/salon-logo.dim_256x256.png in this section. Apply elegant styling consistent with the champagne/gold/charcoal theme. Ensure mobile responsiveness."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Contact component below the Services section, completing the single-page layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply luxurious, elegant visual theme with warm champagne/gold/charcoal palette, refined typography, and full mobile responsiveness",
+      "acceptanceCriteria": [
+        "Consistent warm champagne/gold/charcoal color palette applied site-wide",
+        "Typography is elegant and readable",
+        "All sections are mobile-responsive",
+        "Visual hierarchy clearly guides users from hero to services to contact",
+        "Overall design feels premium and beauty-industry appropriate"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define custom CSS variables for the luxurious color palette (warm champagne, deep charcoal, gold accent tones). Add base styles for elegant typography (serif or elegant sans-serif font families) and soft gradient backgrounds. Establish a premium, beauty-focused visual identity that will be used throughout all components."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom colors for champagne, charcoal, and gold tones. Configure font families for elegant typography. Add custom utilities or shadows to support the premium salon aesthetic. Ensure responsive breakpoints are properly configured for mobile-first design."
+        }
+      ]
+    }
+  ]
+}

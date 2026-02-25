@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Champagne / Warm Ivory */
+    --background: 0.97 0.012 85;
+    --foreground: 0.18 0.02 60;
+
+    /* Cards */
+    --card: 0.99 0.006 80;
+    --card-foreground: 0.18 0.02 60;
+
+    /* Popover */
+    --popover: 0.99 0.006 80;
+    --popover-foreground: 0.18 0.02 60;
+
+    /* Deep Charcoal as Primary */
+    --primary: 0.22 0.018 55;
+    --primary-foreground: 0.97 0.012 85;
+
+    /* Soft Champagne Secondary */
+    --secondary: 0.93 0.025 80;
+    --secondary-foreground: 0.22 0.018 55;
+
+    /* Muted */
+    --muted: 0.93 0.018 75;
+    --muted-foreground: 0.52 0.025 65;
+
+    /* Gold Accent */
+    --accent: 0.78 0.12 75;
+    --accent-foreground: 0.15 0.02 55;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border / Input */
+    --border: 0.88 0.025 78;
+    --input: 0.88 0.025 78;
+    --ring: 0.78 0.12 75;
+
+    /* Gold token */
+    --gold: 0.78 0.12 75;
+    --gold-light: 0.88 0.09 80;
+    --gold-dark: 0.62 0.14 68;
+    --champagne: 0.95 0.022 82;
+    --charcoal: 0.22 0.018 55;
+    --charcoal-light: 0.32 0.018 55;
+
+    /* Charts */
+    --chart-1: 0.78 0.12 75;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.012 85;
+    --sidebar-foreground: 0.18 0.02 60;
+    --sidebar-primary: 0.22 0.018 55;
+    --sidebar-primary-foreground: 0.97 0.012 85;
+    --sidebar-accent: 0.93 0.025 80;
+    --sidebar-accent-foreground: 0.22 0.018 55;
+    --sidebar-border: 0.88 0.025 78;
+    --sidebar-ring: 0.78 0.12 75;
+  }
+
+  .dark {
+    --background: 0.14 0.018 55;
+    --foreground: 0.95 0.012 82;
+    --card: 0.19 0.018 55;
+    --card-foreground: 0.95 0.012 82;
+    --popover: 0.19 0.018 55;
+    --popover-foreground: 0.95 0.012 82;
+    --primary: 0.78 0.12 75;
+    --primary-foreground: 0.14 0.018 55;
+    --secondary: 0.25 0.018 55;
+    --secondary-foreground: 0.95 0.012 82;
+    --muted: 0.25 0.018 55;
+    --muted-foreground: 0.65 0.025 70;
+    --accent: 0.78 0.12 75;
+    --accent-foreground: 0.14 0.018 55;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.14 0.018 55;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.78 0.12 75;
+    --gold: 0.78 0.12 75;
+    --gold-light: 0.88 0.09 80;
+    --gold-dark: 0.62 0.14 68;
+    --champagne: 0.25 0.018 55;
+    --charcoal: 0.85 0.018 75;
+    --charcoal-light: 0.65 0.018 70;
+    --sidebar: 0.19 0.018 55;
+    --sidebar-foreground: 0.95 0.012 82;
+    --sidebar-primary: 0.78 0.12 75;
+    --sidebar-primary-foreground: 0.14 0.018 55;
+    --sidebar-accent: 0.25 0.018 55;
+    --sidebar-accent-foreground: 0.95 0.012 82;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.78 0.12 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Jost', sans-serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .text-charcoal {
+    color: oklch(var(--charcoal));
+  }
+
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+
+  .bg-champagne {
+    background-color: oklch(var(--champagne));
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, oklch(0.88 0.09 80), oklch(0.78 0.12 75), oklch(0.62 0.14 68));
+  }
+
+  .gold-text-gradient {
+    background: linear-gradient(135deg, oklch(0.88 0.09 80), oklch(0.78 0.12 75), oklch(0.62 0.14 68));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.14 0.018 55 / 0.55) 0%,
+      oklch(0.14 0.018 55 / 0.35) 50%,
+      oklch(0.14 0.018 55 / 0.75) 100%
+    );
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, oklch(0.78 0.12 75), transparent);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px oklch(0.14 0.018 55 / 0.12);
+  }
+
+  .whatsapp-btn {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-btn:hover {
+    background: linear-gradient(135deg, #20bd5a, #0e7a6e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px oklch(0.5 0.15 155 / 0.35);
+  }
+}

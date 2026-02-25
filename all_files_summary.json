@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend with no logic implemented.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (hero section, services section, contact section) to their source files, components, and test IDs with confidence levels.",
+  "frontend-file-summaries.txt": "JSON document containing one-line descriptions of each frontend source file, summarizing their purpose and key styling or functional characteristics.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH-based CSS custom properties for light and dark color themes including backgrounds, borders, charts, and sidebar tokens.",
+  "frontend/index.html": "HTML entry point for the React app titled 'Magic Hair Salon', mounting the app at the root div and loading the main TSX module.",
+  "frontend/src/App.tsx": "Root React component that assembles the single-page layout by composing Header, Hero, Services, Contact, and Footer components.",
+  "frontend/src/components/Contact.tsx": "Contact section component displaying the salon's address, star rating, clickable phone/WhatsApp links, a Google Maps directions link, and a WhatsApp booking CTA on a dark charcoal background.",
+  "frontend/src/components/Footer.tsx": "Footer component showing salon branding, address, copyright year, caffeine.ai attribution, and quick links for WhatsApp, phone, and Google Maps directions.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with the salon logo, smooth-scroll links to Services and Contact sections, and a WhatsApp 'Book Now' button for both desktop and mobile.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section featuring a background image, open/closed status badge, salon name, 4.9/5 star rating with 265 reviews, and WhatsApp booking and call CTA buttons.",
+  "frontend/src/components/Services.tsx": "Defines and renders a Services section with five categorized service cards (Hair, Skin & Beauty, Body, Bridal & Event, Other) using Lucide icons and Tailwind styling.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing DFINITY Internet Identity authentication state, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts (Cormorant Garamond, Jost), configures Tailwind layers, and defines light/dark CSS custom properties for a gold-and-champagne luxury color theme.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrapping the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts, oklch-based color tokens (gold, champagne, charcoal), box shadows, and keyframe animations for the salon UI.",
+  "project_state.json": "Project state manifest tracking the current version, summary, architectural notes, implemented features, and image requirements for the Magic Hair Salon website build."
+}

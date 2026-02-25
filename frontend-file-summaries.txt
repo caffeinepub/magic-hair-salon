@@ -1,0 +1,10 @@
+{
+  "frontend/src/index.css": "Global styles with a luxurious champagne/gold/charcoal OKLCH color system, Google Fonts imports for Cormorant Garamond (display) and Jost (body), and utility classes for gold gradients, hero overlays, card hover effects, and WhatsApp button styling.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom font families (Cormorant Garamond, Jost), gold/champagne/charcoal color tokens, custom box shadows, and fade-up/shimmer keyframe animations.",
+  "frontend/src/App.tsx": "Root app component that composes the full single-page layout: Header, Hero, Services, Contact, and Footer sections.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with salon logo/name in gold, smooth-scroll nav links to Services and Contact sections, and a WhatsApp \"Book Now\" button.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section with background image, gradient overlay, salon name in display typography, open status badge, 4.9/5 star rating, WhatsApp booking CTA, and call button.",
+  "frontend/src/components/Services.tsx": "Services section displaying all 5 service categories (Hair, Skin & Beauty, Body, Bridal & Event, Other) as elegant card grid with gold accents, icons, and a bottom WhatsApp booking CTA.",
+  "frontend/src/components/Contact.tsx": "Location and contact section on dark charcoal background showing full address, rating, clickable phone/WhatsApp links, Google Maps directions link, and a pre-filled WhatsApp booking CTA.",
+  "frontend/src/components/Footer.tsx": "Footer with salon branding, address, copyright year, caffeine.ai attribution with UTM tracking, and quick links for WhatsApp, phone, and directions."
+}
