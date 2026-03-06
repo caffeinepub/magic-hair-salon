@@ -17,14 +17,16 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       data-ocid="hero.section"
     >
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style={{
-          backgroundImage:
-            "url('/assets/generated/salon-hero-v2.dim_1600x900.jpg')",
-          transformOrigin: "center center",
-        }}
+      {/* Background Image — eager-loaded for LCP */}
+      <img
+        src="/assets/generated/salon-hero-v2.dim_1600x900.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+        fetchPriority="high"
+        loading="eager"
+        decoding="sync"
+        style={{ transformOrigin: "center center" }}
       />
 
       {/* Layered cinematic overlay */}

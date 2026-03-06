@@ -1,4 +1,5 @@
 import { Crown, Droplets, Heart, Scissors, Sparkles, Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 interface ServiceCategory {
   id: string;
@@ -95,13 +96,43 @@ const WA_ICON = (
   </svg>
 );
 
+function useInView(threshold = 0.12) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return { ref, inView };
+}
+
 function ServiceCard({
   category,
   index,
 }: { category: ServiceCategory; index: number }) {
+  const { ref, inView } = useInView();
   return (
     <div
-      className="group relative rounded-2xl overflow-hidden border border-border bg-card shadow-card card-hover"
+      ref={ref}
+      className="group relative rounded-2xl overflow-hidden border border-border bg-card shadow-card card-hover transition-all duration-500"
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(16px)",
+        transitionDelay: `${index * 60}ms`,
+      }}
       data-ocid={`services.card.${index + 1}`}
     >
       {/* Accent top border */}

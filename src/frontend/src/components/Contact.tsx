@@ -170,6 +170,8 @@ export default function Contact() {
                   alt="Hair Magic Z Unisex Salon Logo"
                   className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   style={{ border: "2px solid oklch(0.76 0.135 72 / 0.45)" }}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div>
                   <h3 className="font-display text-xl font-semibold text-white tracking-wide leading-tight">
