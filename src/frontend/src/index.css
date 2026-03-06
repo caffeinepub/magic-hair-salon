@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-Italic[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm Ivory / Parchment */
+    --background: 0.97 0.01 88;
+    --foreground: 0.16 0.022 55;
+
+    /* Cards */
+    --card: 1.0 0.004 85;
+    --card-foreground: 0.16 0.022 55;
+
+    /* Popover */
+    --popover: 1.0 0.004 85;
+    --popover-foreground: 0.16 0.022 55;
+
+    /* Deep Espresso as Primary */
+    --primary: 0.2 0.02 52;
+    --primary-foreground: 0.97 0.01 88;
+
+    /* Warm Champagne Secondary */
+    --secondary: 0.94 0.022 82;
+    --secondary-foreground: 0.2 0.02 52;
+
+    /* Muted */
+    --muted: 0.93 0.014 78;
+    --muted-foreground: 0.5 0.022 65;
+
+    /* Rich Gold Accent */
+    --accent: 0.76 0.135 72;
+    --accent-foreground: 0.13 0.018 52;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border / Input */
+    --border: 0.87 0.022 80;
+    --input: 0.87 0.022 80;
+    --ring: 0.76 0.135 72;
+
+    /* Brand tokens */
+    --gold: 0.76 0.135 72;
+    --gold-light: 0.87 0.095 78;
+    --gold-dark: 0.6 0.148 65;
+    --gold-shine: 0.92 0.07 84;
+    --champagne: 0.95 0.02 84;
+    --charcoal: 0.2 0.02 52;
+    --charcoal-light: 0.3 0.018 54;
+    --charcoal-mid: 0.38 0.018 55;
+    --cream: 0.98 0.008 90;
+
+    /* Charts */
+    --chart-1: 0.76 0.135 72;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.01 88;
+    --sidebar-foreground: 0.16 0.022 55;
+    --sidebar-primary: 0.2 0.02 52;
+    --sidebar-primary-foreground: 0.97 0.01 88;
+    --sidebar-accent: 0.94 0.022 82;
+    --sidebar-accent-foreground: 0.2 0.02 52;
+    --sidebar-border: 0.87 0.022 80;
+    --sidebar-ring: 0.76 0.135 72;
+  }
+
+  .dark {
+    --background: 0.12 0.018 52;
+    --foreground: 0.95 0.01 84;
+    --card: 0.17 0.018 52;
+    --card-foreground: 0.95 0.01 84;
+    --popover: 0.17 0.018 52;
+    --popover-foreground: 0.95 0.01 84;
+    --primary: 0.76 0.135 72;
+    --primary-foreground: 0.12 0.018 52;
+    --secondary: 0.23 0.018 52;
+    --secondary-foreground: 0.95 0.01 84;
+    --muted: 0.23 0.018 52;
+    --muted-foreground: 0.63 0.022 70;
+    --accent: 0.76 0.135 72;
+    --accent-foreground: 0.12 0.018 52;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.12 0.018 52;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.76 0.135 72;
+    --gold: 0.76 0.135 72;
+    --gold-light: 0.87 0.095 78;
+    --gold-dark: 0.6 0.148 65;
+    --gold-shine: 0.92 0.07 84;
+    --champagne: 0.23 0.018 52;
+    --charcoal: 0.87 0.016 78;
+    --charcoal-light: 0.65 0.016 72;
+    --charcoal-mid: 0.5 0.018 65;
+    --cream: 0.2 0.016 54;
+    --sidebar: 0.17 0.018 52;
+    --sidebar-foreground: 0.95 0.01 84;
+    --sidebar-primary: 0.76 0.135 72;
+    --sidebar-primary-foreground: 0.12 0.018 52;
+    --sidebar-accent: 0.23 0.018 52;
+    --sidebar-accent-foreground: 0.95 0.01 84;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.76 0.135 72;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Satoshi", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-body {
+    font-family: "Satoshi", system-ui, sans-serif;
+  }
+
+  /* Gold text */
+  .text-gold {
+    color: oklch(var(--gold));
+  }
+
+  /* Gold backgrounds */
+  .bg-gold {
+    background-color: oklch(var(--gold));
+  }
+
+  .border-gold {
+    border-color: oklch(var(--gold));
+  }
+
+  .text-charcoal {
+    color: oklch(var(--charcoal));
+  }
+
+  .bg-charcoal {
+    background-color: oklch(var(--charcoal));
+  }
+
+  .bg-champagne {
+    background-color: oklch(var(--champagne));
+  }
+
+  /* Rich multi-stop gold gradient */
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.92 0.07 84) 0%,
+      oklch(0.8 0.13 74) 35%,
+      oklch(0.76 0.135 72) 60%,
+      oklch(0.6 0.148 65) 100%
+    );
+  }
+
+  .gold-gradient-subtle {
+    background: linear-gradient(
+      135deg,
+      oklch(0.87 0.095 78 / 0.15),
+      oklch(0.76 0.135 72 / 0.08)
+    );
+  }
+
+  /* Gold shimmer text */
+  .gold-text-gradient {
+    background: linear-gradient(
+      105deg,
+      oklch(0.92 0.07 84) 0%,
+      oklch(0.8 0.13 74) 30%,
+      oklch(0.76 0.135 72) 55%,
+      oklch(0.6 0.148 65) 80%,
+      oklch(0.8 0.13 74) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gold-shimmer 6s linear infinite;
+  }
+
+  /* Hero overlay - cinematic dark vignette */
+  .hero-overlay {
+    background: radial-gradient(
+        ellipse at center top,
+        oklch(0.12 0.018 52 / 0.1) 0%,
+        transparent 60%
+      ),
+      linear-gradient(
+        to bottom,
+        oklch(0.12 0.018 52 / 0.65) 0%,
+        oklch(0.12 0.018 52 / 0.2) 40%,
+        oklch(0.12 0.018 52 / 0.45) 75%,
+        oklch(0.12 0.018 52 / 0.9) 100%
+      );
+  }
+
+  /* Section divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      oklch(0.76 0.135 72 / 0.5),
+      transparent
+    );
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow
+      0.35s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px oklch(0.12 0.018 52 / 0.14), 0 0 0 1px
+      oklch(0.76 0.135 72 / 0.18);
+  }
+
+  /* WhatsApp button */
+  .whatsapp-btn {
+    background: linear-gradient(135deg, #25d366 0%, #1ea850 50%, #128c7e 100%);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 16px oklch(0.5 0.15 155 / 0.25);
+  }
+
+  .whatsapp-btn:hover {
+    background: linear-gradient(135deg, #2de070 0%, #1cc05a 50%, #0e9e8e 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 28px oklch(0.5 0.15 155 / 0.4);
+  }
+
+  /* Glowing border on focus/hover */
+  .glow-gold {
+    box-shadow: 0 0 0 1px oklch(0.76 0.135 72 / 0.3), 0 8px 32px
+      oklch(0.76 0.135 72 / 0.15);
+  }
+
+  /* Floating animation */
+  .float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  /* Fade up on scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    animation: fade-up 0.7s ease-out forwards;
+  }
+
+  .fade-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .fade-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+  .fade-up-delay-3 {
+    animation-delay: 0.35s;
+  }
+  .fade-up-delay-4 {
+    animation-delay: 0.5s;
+  }
+  .fade-up-delay-5 {
+    animation-delay: 0.65s;
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px oklch(0.76 0.135 72 / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px oklch(0.76 0.135 72 / 0.6);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-text-gradient {
+    animation: none;
+  }
+  .float-slow {
+    animation: none;
+  }
+  .fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
