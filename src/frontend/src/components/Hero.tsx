@@ -19,7 +19,7 @@ export default function Hero() {
     >
       {/* Background Image — eager-loaded for LCP */}
       <img
-        src="/assets/generated/salon-hero-v2.dim_1600x900.jpg"
+        src="/assets/uploads/IMG-20260309-WA0017-1.jpg"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center scale-105"
